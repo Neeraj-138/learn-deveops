@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user</title>
+</head>
+<body>
+    <h1>UserList</h1>
+    <table border="1" width="100%">
+        <tr>
+             <th>S.no</th>
+             <th>UserEmail</th>
+             <th>Password</th>
+             <th>Action</th>
+        </tr>
+
+        <%if(user.length >0){%>
+            <% for(var i=0;i<user.length;i++){ %>
+            
+                <tr>
+                    <td><%=user[i].userid %></td>
+                    <td><%=user[i].user_name %></td>
+                    <td><%=user[i].user_pass %></td>
+                    <td>
+                        <a href="/delete-user?id=<%-user[i].userid %>">Delete</a>
+                        <a href="/update-user?id=<%-user[i].userid %>">Update</a>
+                    </td>
+                </tr>
+            <%}%>
+            <%}else{%>
+                <h1>Data Not Found</h1>
+            <%}%>
+    </table>
+    
+</body>
+</html>

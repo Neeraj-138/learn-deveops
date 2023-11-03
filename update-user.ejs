@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+</head>
+<body>
+
+        <h1>Update Student</h1>
+        <form action='' method="post">
+            <div >
+                <input type='hidden' required name="id" value="<%= user[0].userid %>" />
+        </div>
+            <div >
+                <input type='email' required name="email" value="<%= user[0].user_name %>" placeholder='Enter Email'/>
+        </div>
+        <div >
+                <input type='password' required name="password" value="<%= user[0].user_pass %>" placeholder='Enter Password'/>
+        </div>
+        <input type="submit" value="Submit">
+        </form>
+    
+    
+</body>
+</html>
