@@ -2,6 +2,8 @@ const bodyParser = require('body-parser');
 const express=require('express');
 const connection=require('./connection');
 
+const port = 3000;
+
 const app=express();
 app.set('view engine','ejs');
 
@@ -69,5 +71,7 @@ app.post('/update-user',(req,res)=>{
     });
 
 })
-app.listen(7000);
 
+app.listen(port, () => {
+    console.log(`App listening at http://localhost:${port}`);
+  });
